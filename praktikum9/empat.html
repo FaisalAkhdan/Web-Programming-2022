@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>No 4</title>
+    </head>
+
+    <body>
+        <select name="binatang" id="binatang" onclick="imageBinatang()" onchange="imageConfirmation()">
+            <option value="gorilla">Gorilla</option>
+            <option value="rusa">Rusa</option>
+            <option value="banteng">Banteng</option>
+            <option value="ayam">Ayam</option>
+            <option value="ceklis">Ceklis</option>
+        </select>
+        <div>
+            <img src="#" alt="Foto Keren" style="width: 25%;" id="hasil">
+        </div>
+        
+        <script>
+                const gambar = document.getElementById("hasil")
+                const binatang = document.getElementById("binatang")
+                
+                function imageBinatang() {
+                    if (binatang.value == "gorilla") {
+                        return gambar.src = "img/gorilla.jpg"
+                    } else if (binatang.value == "rusa") {
+                        return gambar.src = "img/rusa.jpg"
+                    } else if (binatang.value == "banteng") {
+                        return gambar.src = "img/banteng.png"
+                    } else if (binatang.value == "ayam") {
+                        return gambar.src = "img/ayam.jpg"
+                    } else {
+                        return gambar.src = "img/ceklis.png"
+                    }
+                }
+                
+                function imageConfirmation() {
+                    alert('Foto Selanjutnya.')
+                }
+        </script>
+    </body>
+</html>

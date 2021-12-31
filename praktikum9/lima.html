@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NO 5</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            table {
+                width: 600px;
+                padding: 1.5em;
+                box-sizing: border-box;
+                border: 2px solid black;
+                border-radius: 20px;
+                background-color: greenyellow;
+            }
+            .container {
+                width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80vh;
+            }
+            .main {
+                width: max-content;
+            }
+            button {
+                width: auto;
+                font-weight: bold;
+                height: 2em;
+                border-radius: 10px;
+            }
+            td {
+                height: 2em;
+            }
+            input {
+                width: 95%;
+                box-sizing: border-box;
+                height: 2em;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="main">
+                <table>
+                    <tr>
+                        <td>Nama Pelanggan</td>
+                        <td>:
+                            <input type="text" required="required" id="pelanggan" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>Email</td>
+                    <td>:
+                            <input type="email" required="required" id="gmail">
+                    </td>
+                    </tr>
+                    <tr>   
+                        <td>Jam Keberangkatan</td>
+                        <td>:
+                            <input type="time" required="required" id="waktu">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tujuan Keberangkatan</td>
+                        <td>:
+                            <input type="text" required="required" id="tujuan">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jumlah Tiket</td>
+                        <td>:
+                            <input type="number" required="required" id="jmlTiket" min="1" max="10">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td><button type="submit" id="submit">Submit</button></td>
+                    </tr> 
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <table id="hasil"></table>
+        </div>
+
+        <script>
+            const submit = document.getElementById('submit');
+            const hasil = document.getElementById('hasil');
+
+            function validateEmail(elementValue){      
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailPattern.test(elementValue); 
+            } 
+
+            submit.onclick = () => {
+                let usernamePelanggan = document.getElementById('pelanggan').value;
+                let emailPelanggan = document.getElementById('gmail').value;
+                let waktuPelanggan = document.getElementById('waktu').value;
+                let tujuanPelanggan = document.getElementById('tujuan').value;
+                let tiketPelanggan = document.getElementById('jmlTiket').value;
+
+                if (usernamePelanggan === '' && emailPelanggan === '' && waktuPelanggan === '' && tujuanPelanggan === '' && tiketPelanggan === ''){
+                    alert('Data Tidak Ada')
+                }
+                    else if (usernamePelanggan === '' || usernamePelanggan === null){
+                        alert('Masukkan Nama anda')
+                    }
+                    else if (emailPelanggan === '' || emailPelanggan === null){
+                        alert('Masukkan Email anda')
+                    }
+                    else if (waktuPelanggan === '' || waktuPelanggan === null){
+                        alert('Masukkan Jam Keberangkatan anda')
+                    }
+                    else if (tujuanPelanggan === '' || tujuanPelanggan === null){
+                        alert('Masukkan Tujuan Keberangkatan anda')
+                    }
+                    else if (tiketPelanggan === '' || tiketPelanggan === null){
+                        alert('Masukkan Jumlah Tiket anda');
+                    } else if(validateEmail(emailPelanggan) != true){
+                        alert('Format email salah');
+                    }
+                else{
+                    const p = document.createElement('P');
+                    hasil.appendChild(p);
+                    p.innerHTML = "Nama Pelanggan :" + usernamePelanggan + "\nemail :" + emailPelanggan  + "\nJam Keberangkatan :" + waktuPelanggan  + "\nTujuan :" + tujuanPelanggan  + "\nJumlah Tiket :" + tiketPelanggan;
+                }
+            }
+        </script>
+    </body>
+</html>

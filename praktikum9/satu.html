@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NO 1</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            button {
+                width: 100%;
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                padding: 5px;
+                border: 1px solid black;
+                height: 40px;
+                background-color: rgb(54, 214, 15);
+                border-radius: 20px;
+            }
+            label {
+                color: white;
+            }
+            .container {    
+                width: 400px;
+                margin: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            input {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                height: 40px;
+                border-radius: 5px;
+            }
+            .main {
+                width: 100%;
+                border-radius: 20px;
+                border: 1px solid black;
+                padding: 1.5em;
+                align-items: center;
+                background-color: rgb(18, 22, 214);
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <div class="main">
+                <div>
+                    <h3><label for="username">Username</label></h3> 
+                    <br>
+                    <input type="text" value="" id="username" placeholder="Username or Email">
+                </div>
+                <br>
+                <div>
+                    <h3><label for="password">Password</label></h3>
+                    <br>
+                    <input type="password"  value="" id="password" placeholder="Password">
+                <br>
+                </div>
+                    <button type="submit" onclick="login()">Login</button>
+            </div>
+        </div>
+
+        <script>
+            const failLogin = () => alert("Username atau password salah")
+
+            const successLogin = () => {
+                console.log("username benar");
+                location.href = "sukses.html";
+            }
+
+            const login = () => {
+                const username = document.getElementById("username").value;
+                const pass = document.getElementById("password").value;
+                console.log(username);
+                console.log(pass);
+                if(username === 'faisal19' && pass === 'mantap123'){
+                    alert('Login Berhasil')
+                    successLogin();
+                } else {
+                    failLogin()
+                }
+            }
+        </script>
+    </body>
+</html>

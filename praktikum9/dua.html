@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kurs Mata Uang Asing</title>
+        <script>
+            function konversiuang() {
+                var input = (document.form.nilai.value);
+                var hitunguang = (document.form.uangasing.value);
+                
+                var hasil = 0;
+            
+                if(hitunguang == "USD"){
+                    hasil = input*9915;
+                }
+                else if(hitunguang == "SGD"){
+                    hasil = input*13472;
+                }
+                else if(hitunguang == "RM"){
+                    hasil = input*874;
+                }
+                else if(hitunguang == "YEN"){
+                    hasil = input*120;
+                }
+                else if(hitunguang == "EURO"){
+                    hasil = input*15888;
+                }
+                else if(hitunguang == "ARB"){
+                    hasil = input*3592;
+                }
+                else{
+                    hasil = 0;
+                }
+                
+                document.form.kurs.value=eval(hasil);            
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="form">
+            <table style="width: 40%;">
+                <tr style="border: 2px solid black;">
+                    <td>Mata Uang Asing :</td>
+                    <td>
+                        <select name="uangasing" onchange="konversiuang()" style="margin: 10px;">
+                            <option value="pilih">-- Pilih Mata Uang Asing --</option>
+                            <option value="USD">Dollar US</option>
+                            <option value="SGD">Dollar Singapore</option>
+                            <option value="RM">Ringgit Malaysia</option>
+                            <option value="YEN">Yen Japan</option>
+                            <option value="EURO">Euro</option>
+                            <option value="ARB">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="nilai">Masukan Nilai :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="nilai" style="margin: 10px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="kurs">Nilai Rupiah :</label>
+                    </td>
+                    <td>
+                        <input type="text" name="kurs" style="margin: 10px;">
+                    </td>
+                </tr>
+            </table>
+        </form>         
+    </body>
+</html>
