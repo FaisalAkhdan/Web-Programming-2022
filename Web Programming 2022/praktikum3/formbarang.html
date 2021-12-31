@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Barang</title>
+    </head>
+
+    <body style="max-width: 1000px; border: 1px solid black; margin-top: 20px; margin-left: 50px;">
+        <header style="background-color: rgb(180, 180, 180); width: 1000px; height: 80px; margin-top: -20px; margin-left: auto;">
+            <h4 style="text-align: center;"> A Web Page</h4>
+            <img src="img/kiri.png" alt="" style="width: 15px; padding-top: 0%; ">
+            <img src="img/kanan.png" alt="" style="width: 15px; padding-top: 0%;">
+            <img src="img/x.png" alt="" style="width: 15px; padding-top: 0%;">
+            <img src="img/home.png" alt="" style="width: 15px; padding-top: 0%;">
+            <input type="text" name="https" placeholder="http://" style="width: 750px;">
+            <input type="text" name="search" placeholder="search" style="border-radius: 3px; width: 95px;">
+        </header>
+        <br>
+        <div style="padding-bottom: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px;">
+            <ul style="list-style-type: none; display: flex; border: 1px solid black; gap: 100px;">
+                <li>Home |</li>
+                <li>Generate Link |</li>
+                <li>Transaction History |</li>
+                <li>Policy |</li>
+                <li>Logout |</li>
+            </ul>
+        </div>
+        <div class="container" style="display: flex;">
+            <div>
+                <aside>
+                    <img style="width: 200px; margin-left: 15px;" src="img/shirt.png" alt="">
+                    <input style="width: 250px; margin-left: 70px;" type="file" name="picture">
+                </aside>
+            </div>
+            <div>
+                <form method="POST">
+                    <table>
+                        <tr>
+                            <td><label>Title Here</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="title"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Description</label></td>
+                            <td>:</td>
+                            <td><textarea name="description" cols="30" rows="3"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td><label>Account Number</label></td>
+                            <td>:</td>
+                            <td><input type="number" name="UserAccount"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Bank</label></td>
+                            <td>:</td>
+                            <td>
+                                <select name="bank">
+                                    <option value="bank">HSBC</option>
+                                    <option value="bank">BCA</option>
+                                    <option value="bank">BRI</option>
+                                    <option value="bank">BNI</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label>Account Holder</label></td>
+                            <td>:</td>
+                            <td><input type="text" name="holder"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Transaction</label></td>
+                            <td>:</td>
+                            <td>
+                                <select name="transaction">
+                                    <option value="transaction">1</option>
+                                    <option value="transaction">2</option>
+                                    <option value="transaction">3</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="width: 100%;">*If the transaction is for 3 person, choose 3 from the drop-down list</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: rgb(48, 194, 11);"><input type="checkbox">Send to Mobile Phone</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td style="color: rgb(48, 194, 11);"><input type="checkbox">Send to Email</td>
+                        </tr>
+                        <tr>
+                            <td><label for="sendphone">Send to Mobile Phone</label></td>
+                            <td>:</td>
+                            <td><input type="number" name="Number" id="sendphone" /></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sendmail">Send to Email</label></td>
+                            <td>:</td>
+                            <td><input type="email" name="Email" id="sendmail"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="submit" name="generate" style="color: white; background-color: rgb(28, 146, 38); align-content: center; margin-top: 20px;">Generate
+                                    Nabr Link
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

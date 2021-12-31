@@ -1,0 +1,94 @@
+body {
+    max-width: 1000px; 
+    border: 1px solid black; 
+    margin: auto;
+}
+
+/* id selector */
+#nav {
+    background-color: rgb(255, 145, 0); 
+    height: 50px; 
+    display: grid;
+}
+
+#ul {
+    display: flex; 
+    list-style: none;
+}
+
+#div1, #div2 {
+    display: flex;    
+    margin-top: 10px;
+}
+
+#maindiv {
+    width: 60%;
+}
+
+#navfooter {
+    background-color: rgb(255, 145, 0); 
+    display: grid;
+}
+
+/* class selector */
+.tdtotal {
+    padding: 10px;
+    text-align: right;
+}
+
+.tableaside {
+    width: 100%;
+}
+
+.logoatas {
+    padding-left: 10px; 
+    float: left;  
+    width: 20px;
+}
+
+.search {
+    margin-right: 10px; 
+    margin-left: auto;
+}
+
+.ul1 {
+    display: flex; 
+    margin-top: auto; 
+    list-style: none;
+}
+
+.li1 {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.aside1 {
+    width: 40%;
+    height: 20%; 
+    background-color: rgb(253, 235, 213); 
+    padding: 10px; 
+    border: 2px solid black;
+}
+
+.aside {
+    padding: 10px;
+}
+
+.logo {
+    padding-left: 10px; 
+    float: left; 
+    margin: 0px 9px 3px 0px; 
+    width: 15px
+}
+
+.alamat {
+    gap: 10px; 
+    max-width: 200px;
+}
+
+.ceklis {
+    width: 80px; 
+    padding-left: 10px; 
+    float: left; 
+    margin: 0px 9px 3px 0px;
+}

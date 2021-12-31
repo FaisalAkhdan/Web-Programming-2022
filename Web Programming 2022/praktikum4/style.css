@@ -1,0 +1,55 @@
+.profile {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.email {
+  padding: 30px
+}
+
+.divfoto {
+  float: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#foto {
+  width: 180px;
+}
+
+.profilename {
+  float: left;
+  margin-left: 20px;
+}
+  
+.categories {
+  display: inline;
+  float: right;
+  margin-right: 50px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.article {
+  float: left;
+  text-align: justify;
+}
+  
+.video {
+  width: 300px;
+  height: 310px;
+}
+
+#fieldset {
+  margin: 30px
+}
+
+.attac {
+  height: 310px;  
+  width: 100%;
+  padding-right: 20px;    
+}
+
+.img{
+  width: 100px;
+}
